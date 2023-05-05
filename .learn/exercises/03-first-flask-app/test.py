@@ -1,5 +1,7 @@
 import toml, pytest, os, sys, tempfile, mock, re
-import flask
+from flask import Flask
+app = Flask(__name__)
+
 @pytest.mark.it("Folder src must exist")
 def test_src_folder():
   assert os.path.isdir("./src/")
